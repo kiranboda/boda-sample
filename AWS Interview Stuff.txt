@@ -1,0 +1,75 @@
+VPC Basics
+===============================
+customer gateway at onpremise side
+virtual private gateway at aws side
+in between vpn, via ip sec protocol it establishes connection
+vpc endpoints:
+ip cidr: 10.0.0.0/16
+         10.0.255.255   i.e first two octets never change
+         10.0.[0-255].[0-255]
+010000.0001001.0010010.0014100
+
+2 (16) 65536 IPs
+
+https://www.youx.xxx/tag/chubby-indian/picture/
+http://www.lamalinks.com/?q=fat+indian+bbw
+
+10.0.1.0/26  cidr need not to be multiple of 8
+8 8 8 10.1010101
+
+10.0.0.0
+10.2.10.1
+10.14.1.2
+10.2.5.3
+10.2.4.5.255  are reserverd by aws 
+
+use egress only internet gateway
+security group : return traffic allowed by default i.e stateful 
+nacl: return traffic must be allowed explicitlyi.e stateless
+
+if hardware crashes under volume that volume will be safe , but if availabilty zone goes down volume also crashes, so we need to takse snapshot for volume and snapshot
+is region specific. we can migrate this snapshot to another region
+snapshots are incremental backups
+
+ec2 role or vpc endpoint for s3 wil work to access private ec2 instance
+all ICMP rules for ping request in security groups
+---vpc flowlogs--
+you can enable vpc flow logs for vpc that are peered with your vpc unless it has in your own account	
+========================================================
+
+AWS Ec2 rescue tool will solve below problems
+-firewall configuration
+-RDP Service configuration
+-Network Interface configuration
+-Blue screen or stop error
+-boot load
+-corrupted registrey
+============================================
+
+AWS Storage Gateway
+-FileGateway
+-Volume Gateway
+-Tape Gateway
+=============================================
+
+AWS Backup support following services
+-Ec2
+-EBS
+-RDS
+-DynamoDB
+-EFS
+-StorageGateway
+===================================================
+amazon elastic cache uses two db engines
+-redis
+-memcached
+==============================
+AWS lambda maily uses the below services
+-AWS DynamoDB
+-S3
+-Kinesis
+-SNS
+-CloudWtach
+
+
+
